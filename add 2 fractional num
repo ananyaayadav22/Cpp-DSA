@@ -1,0 +1,39 @@
+#include <iostream>
+using namespace std;
+
+// Function to compute GCD (Greatest Common Divisor)
+int gcd(int a, int b) {
+    while (b != 0) {
+        int temp = b;
+        b = a % b;
+        a = temp;
+    }
+    return a;
+}
+
+// Function to add two fractions and simplify the result
+void addFractions(int num1, int den1, int num2, int den2) {
+    // Compute the numerator and denominator of the result
+    int num = (num1 * den2) + (num2 * den1);
+    int den = den1 * den2;
+
+    // Find GCD to simplify the fraction
+    int commonFactor = gcd(num, den);
+    num /= commonFactor;
+    den /= commonFactor;
+
+    // Display output with denominator always shown
+    cout << num << " " << den << endl;
+}
+
+int main() {
+    int num1, den1, num2, den2;
+    
+    // Taking input
+    cin >> num1 >> den1 >> num2 >> den2;
+
+    // Function call to add fractions
+    addFractions(num1, den1, num2, den2);
+
+    return 0;
+}
