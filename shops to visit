@@ -1,0 +1,17 @@
+#include  <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+int binary(int m, int n){
+    int mul = pow( 2, n);
+    return mul - m;
+}
+
+int main(){
+    int m, n;
+    cout<<"enter the number: ";
+    cin>> m>>n;
+    
+    cout<< binary(m,n);
+    
+}
