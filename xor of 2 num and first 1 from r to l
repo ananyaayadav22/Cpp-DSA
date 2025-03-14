@@ -1,0 +1,16 @@
+#include  <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+int binary(int m, int n){
+    int xorval = m ^ n;
+    return log2(xorval & -xorval) + 1;
+}
+
+int main(){
+    int m, n;
+    cout<<"enter the number: ";
+    cin>> m>>n;
+    
+    cout<<"first 1 from r to l is at position : "<<binary(m,n);
+}
