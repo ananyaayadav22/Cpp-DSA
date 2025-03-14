@@ -1,0 +1,18 @@
+#include  <bits/stdc++.h>
+#include <iostream>
+using namespace std;
+
+int binary(int n){
+    if (n==0){
+        return 0;
+    }
+    return log2(n) + 1;
+}
+
+int main(){
+    int n;
+    cout<<"enter the number: ";
+    cin>> n;
+    
+    cout<<"first 1 from r to l is at position : "<<binary(n);
+}
